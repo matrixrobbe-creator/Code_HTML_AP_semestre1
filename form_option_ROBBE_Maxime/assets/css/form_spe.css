@@ -1,0 +1,145 @@
+/* --- Styles généraux --- */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7f6; /* Arrière-plan doux */
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrer le contenu horizontalement */
+}
+
+/* --- Style de l'en-tête --- */
+header {
+    width: 100%;
+    max-width: 600px; /* Limite la largeur comme le formulaire */
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #007bff;
+}
+
+h1 {
+    color: #007bff; /* Bleu primaire */
+    font-size: 1.8em;
+}
+
+/* --- Conteneur principal du formulaire --- */
+.form-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px; /* Largeur maximale du formulaire */
+}
+
+/* --- Légende (Titre de la section) --- */
+legend {
+    font-size: 1.4em;
+    color: #555;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    font-weight: bold;
+}
+
+/* --- Style des groupes de champs (div.form-group) --- */
+.form-group {
+    margin-bottom: 15px;
+    padding: 10px 0;
+    display: flex; /* Utilisation de Flexbox pour aligner label et input */
+    flex-direction: column; /* Les éléments s'empilent verticalement */
+    gap: 5px; /* Espace entre le label et l'input */
+}
+
+/* --- Style des étiquettes (Label) --- */
+label {
+    font-weight: 600;
+    margin-bottom: 5px;
+    display: block; /* S'assure qu'ils prennent toute la largeur disponible */
+    color: #444;
+}
+
+/* --- Style des champs de saisie (input, select, textarea) --- */
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Inclut le padding et border dans la largeur */
+    transition: border-color 0.3s;
+    font-size: 1em;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #007bff; /* Bordure bleue au focus */
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+/* Style spécifique pour la zone de texte multiligne */
+textarea {
+    resize: vertical; /* Permet uniquement le redimensionnement vertical */
+    min-height: 100px;
+}
+
+/* --- Style du champ RANGE (Curseur d'humeur) --- */
+input[type="range"] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 10px;
+    background: #ddd;
+    border-radius: 5px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #007bff;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Style du bouton de soumission --- */
+#submit_button,
+input[type="submit"] {
+    background-color: #28a745; /* Vert pour l'action principale */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    width: 100%; /* Le bouton prend toute la largeur du groupe */
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+#submit_button:hover,
+input[type="submit"]:hover {
+    background-color: #218838; /* Vert plus foncé au survol */
+}
+
+/* --- Styles pour la validation (optionnel, pour l'esthétique) --- */
+input:required:valid {
+    border-color: #28a745; /* Vert si valide */
+}
+
+input:required:invalid:not(:focus):not(:placeholder-shown) {
+    border-color: #dc3545; /* Rouge si invalide et n'est pas en focus */
+}

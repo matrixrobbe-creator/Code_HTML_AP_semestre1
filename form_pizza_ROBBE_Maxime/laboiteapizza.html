@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formulaire de commande en ligne pour La Boîte à Pizza. Commandez vos pizzas préférées facilement.">
+    <link rel="stylesheet" href="./assets/css/laboiteapizza.css">
+    <title>La Boîte à Pizza - Commande en ligne</title>
+ 
+</head>
+    <body>
+        <header>
+            <h1>La Boîte à Pizza</h1>
+            <p> La référence pour vos commandes de pizzas en ligne </p>
+        </header>
+    
+        <main>
+            <h2>🍕 Formulaire de commande 🍕</h2>
+            <form action="https://webhook.site/49c300a2-0bd4-4b22-a603-e5739232ba9e" method="post" class="form-container">
+                <fieldset>
+
+                    <input type="hidden" name="student" value="ROBBE" />
+
+                    <legend>Informations Personnelles</legend>
+                    <div class="form-group">
+                        <label for="nom">Nom :</label>
+                        <input type="text" id="nom" name="nom" placeholder="Votre nom de famille" required >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="nom">Numéro client : ( optionnel )</label>
+                        <input type="text" id="num_client" name="num_client" placeholder="Votre numéro de client ( si existant )">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="code_postal">Code postal :</label>
+                        <input type="number" id="code_postal" name="code_postal" placeholder="Votre code postal" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ville">Ville :</label>
+                        <input type="text" id="ville" name="ville" placeholder="Votre ville" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="rue">Nom de rue :</label>
+                        <input type="text" id="rue" name="rue" placeholder="Votre nom de rue" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="numéro_de_rue">Numéro de rue :</label>
+                        <input type="text" id="numéro_de_rue" name="numéro_de_rue" placeholder="Votre numéro de rue" required>
+                    </div>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Choix de la Pizza</legend>
+                    <div class="form-group">
+                        <label>Base :</label>
+                        <div class="radio-group">
+                            <label for="base-tomate">
+                                <input type="radio" id="base-tomate" name="base" value="Base Tomate 🍅" required>
+                                Tomate 🍅
+                            </label>
+                            <label for="base-creme">
+                                <input type="radio" id="base-creme" name="base" value="Base Crème 🥛" required>
+                                 Crème 🥛
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Taille :</label>
+                        <div class="radio-group">
+                            <label for="taille-m">
+                                <input type="radio" id="taille-m" name="taille" value="M" required>
+                                M
+                            </label>
+                            <label for="taille-l">
+                                <input type="radio" id="taille-l" name="taille" value="L" required>
+                                L (+4.00€)
+                            </label>
+                            <label for="taille-xl">
+                                <input type="radio" id="taille-xl" name="taille" value="XL" required>
+                                XL (+6.00)
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Pâte :</label>
+                        <div class="radio-group">
+                            <label for="pate-fine">
+                                <input type="radio" id="pate-fine" name="pate" value="fine" required>
+                                Fine
+                            </label>
+                            <label for="pate-fourree">
+                                <input type="radio" id="pate-fourree" name="pate" value="fourree" required>
+                                Fourrée ( +2.00€)
+                            </label>
+                            <label for="pate-epaisse">
+                                <input type="radio" id="pate-epaisse" name="pate" value="epaisse" required>
+                                Épaisse ( +1.50€)
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Suppléments :</label>
+                        <div class="checkbox-group">
+                            <label for="supp-pepperonis">
+                                <input type="checkbox" id="supp-pepperonis" name="supplements" value="pepperonis">
+                                Pepperonis : (+1.20€)
+                            </label>
+                            <label for="supp-mozarella">
+                                <input type="checkbox" id="supp-mozarella" name="supplements" value="mozarella">
+                                Mozzarella : (+1.80€)
+                            </label>
+                            <label for="supp-oeufs">
+                                <input type="checkbox" id="supp-oeufs" name="supplements" value="oeufs">
+                                Oeufs : (+1.80€)
+                            </label>
+                            <label for="supp-champignons">
+                                <input type="checkbox" id="supp-champignons" name="supplements" value="champignons">
+                                Champignons : (+1.30€)
+                            </label>
+                            <label for="supp-ananas">
+                                <input type="checkbox" id="supp-ananas" name="supplements" value="ananas">
+                                Ananas : (+1150€)
+                            </label>
+                            <label for="supp-poivrons">
+                                <input type="checkbox" id="supp-poivrons" name="supplements" value="poivrons">
+                                Poivrons : (+1.40€)
+                            </label>
+                             <label for="supp-viandes">
+                                <input type="checkbox" id="supp-viandes" name="supplements" value="viandes">
+                                Viandes hachées : (+2.50€)
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <!-- Section pour la sélection des pizzas base tomate -->
+                    <div id="pizza-tomate" class="pizza-selection">
+                        <div class="pizza-item">
+                            <img src="./assets/img/pizza_margherita.jfif" alt="Pizza Margherita">
+                            <div class="pizza-details">
+                                <h3>Margherita 🇮🇹 (+12.00€) </h3>
+                                <p>Sauce San Marzano, Mozzarella AOP, basilic frais, huile d'olive extra vierge.</p>
+                            </div>
+                            <input type="number" name="quantite_margherita" class="quantity-input" min="0" value="0" placeholder="Quantité">
+                        </div>
+                        <div class="pizza-item">
+                            <img src="./assets/img/pizza_peperoni.jpg" alt="Pizza Pepperoni">
+                            <div class="pizza-details">
+                                <h3>Pepperoni 🌶️ (+15.00€)</h3>
+                                <p>Tomate, mozzarella, pepperoni épicé de Calabre.</p>
+                            </div>
+                            <input type="number" name="quantite_pepperoni" class="quantity-input" min="0" value="0" placeholder="Quantité">
+                        </div>
+                        <div class="pizza-item">
+                            <img src="./assets/img/pizza_4fromages.jpg" alt="Pizza Quatre Fromages">
+                            <div class="pizza-details">
+                                <h3>Reine Classique 👑 (15.00€)</h3>
+                                <p>Tomate, Mozzarella, jambon blanc, champignons frais.</p>
+                            </div>
+                            <input type="number" name="quantite_quatre_fromages" class="quantity-input" min="0" value="0" placeholder="Quantité">
+                        </div>
+                        <div class="pizza-item">
+                            <img src="./assets/img/pizza_ortolana.jfif" alt="Pizza Végétarienne">
+                            <div class="pizza-details">
+                                <h3>Ortolana Végétale 🥦(+15840.00€)</h3>
+                                <p>Tomate, Mozzarella, légumes grillés de saison (poivrons, courgettes).</p>
+                            </div>
+                            <input type="number" name="quantite_vegetarienne" class="quantity-input" min="0" value="0" placeholder="Quantité">
+                        </div>
+                    </div>
+                    
+                    <!-- Section pour la sélection des pizzas base crème -->
+                    <div id="pizza-creme" class="pizza-selection" style="display: none;">
+                        <div class="pizza-item">
+                            <img src="./assets/img/pizza_carbonara.jfif" alt="Pizza Carbonara">
+                            <div class="pizza-details">
+                                <h3>Carbonara 🥓 (16.00€)</h3>
+                                <p>Crème, lardons fumés, œuf de ferme, oignons.</p>
+                            </div>
+                            <input type="number" name="quantite_carbonara" class="quantity-input" min="0" value="0" placeholder="Quantité">
+                        </div>
+                        <div class="pizza-item">
+                            <img src="./assets/img/pizza_alfredo.jfif" alt="Pizza Alfredo">
+                            <div class="pizza-details">
+                                <h3>Alfredo (14.00€)</h3>
+                                <p>Crème, poulet, parmesan, ail</p>
+                            </div>
+                            <input type="number" name="quantite_alfredo" class="quantity-input" min="0" value="0" placeholder="Quantité">
+                        </div>
+                        <div class="pizza-item">
+                            <img src="./assets/img/pizza_pesto.jfif" alt="Pizza Pesto">
+                            <div class="pizza-details">
+                                <h3>Pesto (12.00€)</h3>
+                                <p>Crème, pesto, mozzarella, tomates séchées</p>
+                            </div>
+                            <input type="number" name="quantite_pesto" class="quantity-input" min="0" value="0" placeholder="Quantité">
+                        </div>
+                        <div class="pizza-item">
+                            <img src="./assets/img/pizza_gorgonzola.jfif" alt="Pizza Gorgonzola">
+                            <div class="pizza-details">
+                                <h3>Gorgonzola (14.00€)</h3>
+                                <p>Crème, gorgonzola, noix, miel</p>
+                            </div>
+                            <input type="number" name="quantite_gorgonzola" class="quantity-input" min="0" value="0" placeholder="Qté">
+                        </div>
+                    </div>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Options de Commande</legend>
+                    <div class="form-group">
+                        <label>Livraison à Domicile 🛵 : ( payante )</label>
+                        <div class="radio-group">
+                            <label for="livraison-oui">
+                                <input type="radio" id="livraison-oui" name="livraison" value="oui" required>
+                                Oui
+                            </label>
+                            <label for="livraison-non">
+                                <input type="radio" id="livraison-non" name="livraison" value="non">
+                                Non
+                            </label>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Moyen de paiement :</label>
+                        <div class="radio-group">
+                            <label for="paiement-carte">
+                                <input type="radio" id="paiement-carte" name="paiement" value="carte" required>
+                                Carte Bancaire (à la livraison) 💳
+                            </label>
+                            <label for="paiement-especes">
+                                <input type="radio" id="paiement-especes" name="paiement" value="especes">
+                                Espèces (à la livraison) 💰
+                            </label>
+                            <label for="paiement-paypal">
+                                <input type="radio" id="paiement-paypal" name="paiement" value="paypal">
+                                PayPal 🅿️
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+                
+                <button type="submit" class="submit-btn">Commander</button>
+            </form>
+        </main>
+    
+        <footer>
+            <p>&copy; 2025 La Boîte à Pizza. Tous droits réservés. Pizzeria imaginaire pour le bien d'un travail de démonstration.</p>
+        </footer>
+    
+        <script>
+            // JavaScript pour basculer entre les sélections de pizzas
+            const baseTomate = document.getElementById('base-tomate');
+            const baseCreme = document.getElementById('base-creme');
+            const pizzaTomate = document.getElementById('pizza-tomate');
+            const pizzaCreme = document.getElementById('pizza-creme');
+    
+            baseTomate.addEventListener('change', function() {
+                if (this.checked) {
+                    pizzaTomate.style.display = 'flex';
+                    pizzaCreme.style.display = 'none';
+                }
+            });
+    
+            baseCreme.addEventListener('change', function() {
+                if (this.checked) {
+                    pizzaCreme.style.display = 'flex';
+                    pizzaTomate.style.display = 'none';
+                }
+            });
+        </script>
+    </body>
+    </html>
+    
+
