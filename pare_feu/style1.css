@@ -1,0 +1,43 @@
+h1 { 
+    color: gray;
+    margin-left: 50px;
+    font-family:Arial, Helvetica, sans-serif
+}
+
+h2 {
+    color: darkgray;
+    margin-left:  50px;
+    font-family:Arial, Helvetica, sans-serif
+
+}
+
+p1 {
+    font-size: 18px;
+    color: black;
+    margin-left: 50px;
+    font-family:Arial, Helvetica, sans-serif
+
+}
+
+
+
+.explication {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family:Arial, Helvetica, sans-serif
+
+}
+ul {
+    margin-left: 100px;
+    font-family:Arial, Helvetica, sans-serif
+
+}
+
+p2 {
+    font-size: 16px;
+    color: black;
+    margin-left: 50px;
+    font-family:Arial, Helvetica, sans-serif
+
+}
